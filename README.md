@@ -60,4 +60,9 @@ The Belly Button Biodiversity dashboard is an interactive exploration tool 🛠�
 
 ## Hints 💡🔍
 - Employ `console.log` at various stages of your JavaScript code to examine the data structure and debug your application.
+
+## References
+
+Hulcr, J. et al. (2012) *A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable*. Retrieved from: [http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/](http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/)
+
 ---
