@@ -3,7 +3,7 @@
 ![Dashboard Preview](dashboard_preview.png)
 
 ## Deployment Link 🔗💻
-- [Dashboard Deployment](https://jms5039.github.io/belly-button-challenge/) (Link to the deployed dashboard)
+[Dashboard Deployment](https://jms5039.github.io/belly-button-challenge/) (Link to the deployed dashboard)
 
 ## Background 🌍🔬
 
