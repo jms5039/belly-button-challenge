@@ -60,9 +60,10 @@ function updateCharts(data, sample) {
   var bubbleLayout = {
     title: "Bacteria Cultures Per Sample",
     hovermode: "closest",
-    xaxis: { title: "OTU ID", automargin: true }, // Automargin for automatic adjustment
-    yaxis: { automargin: true }, // Automargin for automatic adjustment
-    autosize: true // Allow the bubble layout to adjust to the size of the container
+    xaxis: { title: "OTU ID", automargin: true },
+    yaxis: { automargin: true },
+    margin: { t: 50, l: 75, r: 50, b: 100 }, // Adjusted margins
+    autosize: true
   };
 
   Plotly.newPlot('bubble', bubbleData, bubbleLayout, {responsive: true});
