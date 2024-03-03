@@ -59,5 +59,6 @@ The Belly Button Biodiversity dashboard is an interactive exploration tool 🛠�
 - Employ `console.log` at various stages of your JavaScript code to examine the data structure and debug your application.
 
 ## Deployment Links 🔗💻
-- [Dashboard Deployment](#) (Link to the deployed dashboard)
+- [Dashboard Deployment](https://username.github.io/BELLY-BUTTON-CHALLENGE/) (Link to the deployed dashboard)
+
 ---
