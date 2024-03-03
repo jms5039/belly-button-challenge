@@ -114,8 +114,8 @@ function updateGaugeChart(wfreq) {
       marker: { size: 28, color: '850000' },
       showlegend: false,
       name: 'Washing Frequency',
-      text: 'Washing Frequency: ${wfreq}', // Display wfreq in hover text
-      hoverinfo: 'text'
+      text: `Washing Frequency: ${wfreq}`, // Display wfreq in hover text
+      hoverinfo: `${wfreq}`
     },
     {
       values: [50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50],
@@ -133,7 +133,7 @@ function updateGaugeChart(wfreq) {
         ]
       },
       labels: ['8-9', '7-8', '6-7', '5-6', '4-5', '3-4', '2-3', '1-2', '0-1', ''],
-      hoverinfo: 'text',
+      hoverinfo: `${wfreq}`,
       hole: .5,
       type: 'pie',
       showlegend: false
