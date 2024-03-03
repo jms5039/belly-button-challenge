@@ -113,8 +113,8 @@ function updateGaugeChart(wfreq) {
       x: [0], y: [0],
       marker: { size: 28, color: '850000' },
       showlegend: false,
-      name: 'freq',
-      text: level,
+      name: 'Washing Frequency',
+      text: 'Washing Frequency: ${wfreq}', // Display wfreq in hover text
       hoverinfo: 'text+name'
     },
     {
