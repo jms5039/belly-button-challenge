@@ -115,7 +115,7 @@ function updateGaugeChart(wfreq) {
       showlegend: false,
       name: 'Washing Frequency',
       text: 'Washing Frequency: ${wfreq}', // Display wfreq in hover text
-      hoverinfo: 'text+name'
+      hoverinfo: 'text'
     },
     {
       values: [50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50],
