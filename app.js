@@ -61,7 +61,8 @@ function updateCharts(data, sample) {
     margin: { t: 0 },
     hovermode: "closest",
     xaxis: { title: "OTU ID" },
-    margin: { t: 30}
+    margin: { t: 30 },
+    autosize: true // Allow automatic resizing
   };
 
   Plotly.newPlot('bubble', bubbleData, bubbleLayout);
@@ -150,8 +151,8 @@ function updateGaugeChart(wfreq) {
       }
     }],
     title: 'Belly Button Washing Frequency<br>Scrubs per Week',
-    height: 500,
-    width: 500,
+    height: 500, // Adjust as needed
+    width: 500, // Adjust as needed
     xaxis: { zeroline: false, showticklabels: false, showgrid: false, range: [-1, 1] },
     yaxis: { zeroline: false, showticklabels: false, showgrid: false, range: [-1, 1] }
   };
