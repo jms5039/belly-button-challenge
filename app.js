@@ -38,7 +38,8 @@ function updateCharts(data, sample) {
 
   var barLayout = {
     title: "Top 10 OTUs Found",
-    margin: { t: 30, l: 150 }
+    margin: { t: 30, l: 150 },
+    autosize: true // Allow the bar layout to adjust to the size of the container
   };
 
   Plotly.newPlot('bar', barData, barLayout, {responsive: true});
@@ -59,8 +60,9 @@ function updateCharts(data, sample) {
   var bubbleLayout = {
     title: "Bacteria Cultures Per Sample",
     hovermode: "closest",
-    xaxis: { title: "OTU ID" },
-    margin: { t: 30 }
+    xaxis: { title: "OTU ID", automargin: true }, // Automargin for automatic adjustment
+    yaxis: { automargin: true }, // Automargin for automatic adjustment
+    autosize: true // Allow the bubble layout to adjust to the size of the container
   };
 
   Plotly.newPlot('bubble', bubbleData, bubbleLayout, {responsive: true});
@@ -127,7 +129,6 @@ function updateGaugeChart(wfreq) {
         ]
       },
       labels: ['8-9', '7-8', '6-7', '5-6', '4-5', '3-4', '2-3', '1-2', '0-1', ''],
-      hoverinfo: wfreq,
       hole: .5,
       type: 'pie',
       showlegend: false
