@@ -1,6 +1,6 @@
 # Belly Button Biodiversity Dashboard 🧫📊
 
-![Belly Button Biodiversity](Dashboard Snippet.png)
+![Belly Button Biodiversity](Dashboard%20Snippet.png)
 
 ## Deployment Link 🔗💻
 [Dashboard Deployment](https://jms5039.github.io/belly-button-challenge/) (Link to the deployed dashboard)
