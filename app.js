@@ -127,7 +127,7 @@ function updateGaugeChart(wfreq) {
         ]
       },
       labels: ['8-9', '7-8', '6-7', '5-6', '4-5', '3-4', '2-3', '1-2', '0-1', ''],
-      hoverinfo: 'label',
+      hoverinfo: wfreq,
       hole: .5,
       type: 'pie',
       showlegend: false
@@ -144,8 +144,7 @@ function updateGaugeChart(wfreq) {
         }
       }],
     title: 'Belly Button Washing Frequency<br>Scrubs per Week',
-    height: 500,
-    width: 500,
+    // Removed fixed width and height to allow responsiveness
     xaxis: {zeroline:false, showticklabels:false,
              showgrid: false, range: [-1, 1]},
     yaxis: {zeroline:false, showticklabels:false,

@@ -37,12 +37,14 @@ body {
   
   /* Chart Containers */
   #bar, #gauge, #bubble {
-    min-height: 400px; /* Ensure a minimum height for the chart containers */
+    min-height: 600px; /* Increased height for the chart containers */
     margin-top: 1rem;
     background-color: #fff;
     padding: 1rem;
     border-radius: 0.25rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Control the width for better chart display */
+    max-width: 100%;
   }
   
   /* Enhancing Select and Button Elements */
