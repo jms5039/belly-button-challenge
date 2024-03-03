@@ -2,6 +2,9 @@
 
 ![Dashboard Preview](dashboard_preview.png)
 
+## Deployment Link 🔗💻
+- [Dashboard Deployment](https://jms5039.github.io/belly-button-challenge/) (Link to the deployed dashboard)
+
 ## Background 🌍🔬
 
 The Belly Button Biodiversity dashboard is an interactive exploration tool 🛠️ designed to explore the diverse microbial species—operational taxonomic units (OTUs)—that colonize human navels. Utilizing data from the Belly Button Biodiversity dataset, this project showcases how a small number of microbial species are prevalent in the majority of people, while others are more rare.
@@ -57,7 +60,4 @@ The Belly Button Biodiversity dashboard is an interactive exploration tool 🛠�
 
 ## Hints 💡🔍
 - Employ `console.log` at various stages of your JavaScript code to examine the data structure and debug your application.
-
-## Deployment Link 🔗💻
-- [Dashboard Deployment](https://jms5039.github.io/belly-button-challenge/) (Link to the deployed dashboard)
 ---
