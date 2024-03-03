@@ -50,7 +50,7 @@ function updateCharts(data, sample) {
     text: otu_labels,
     mode: 'markers',
     marker: {
-      size: sample_values,
+      size: getBubbleSize(sample_values), // Dynamically adjust bubble size
       color: otu_ids,
       colorscale: "Earth"
     }
@@ -58,14 +58,21 @@ function updateCharts(data, sample) {
 
   var bubbleLayout = {
     title: "Bacteria Cultures Per Sample",
-    margin: { t: 0 },
+    margin: { t: 50, r: 50, b: 100, l: 100 }, // Adjust margins
     hovermode: "closest",
     xaxis: { title: "OTU ID" },
-    margin: { t: 30 },
-    autosize: true // Allow automatic resizing
+    yaxis: { title: "Sample Values" }
   };
 
   Plotly.newPlot('bubble', bubbleData, bubbleLayout);
+}
+
+// Function to calculate bubble size dynamically
+function getBubbleSize(sample_values) {
+  // Find the maximum sample value
+  var maxSampleValue = Math.max(...sample_values);
+  // Scale the bubble size based on the maximum sample value
+  return sample_values.map(value => 30 * (value / maxSampleValue));
 }
 
 function updateMetadata(data, sample) {
