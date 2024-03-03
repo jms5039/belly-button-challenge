@@ -41,7 +41,7 @@ function updateCharts(data, sample) {
     margin: { t: 30, l: 150 }
   };
 
-  Plotly.newPlot('bar', barData, barLayout);
+  Plotly.newPlot('bar', barData, barLayout, {responsive: true});
 
   // Update bubble chart
   var bubbleData = [{
@@ -58,13 +58,12 @@ function updateCharts(data, sample) {
 
   var bubbleLayout = {
     title: "Bacteria Cultures Per Sample",
-    margin: { t: 0 },
     hovermode: "closest",
     xaxis: { title: "OTU ID" },
-    margin: { t: 30}
+    margin: { t: 30 }
   };
 
-  Plotly.newPlot('bubble', bubbleData, bubbleLayout);
+  Plotly.newPlot('bubble', bubbleData, bubbleLayout, {responsive: true});
 }
 
 function updateMetadata(data, sample) {
@@ -86,20 +85,15 @@ function updateMetadata(data, sample) {
 
 // Function to update the gauge chart
 function updateGaugeChart(wfreq) {
-  // If wfreq is null or undefined, wfreq will be set to 0
   wfreq = wfreq || 0;
+  var level = parseFloat(wfreq) * 20;
 
-  // Calculate the angle for the gauge needle
-  var level = parseFloat(wfreq) * 20; // Multiply by 20 to get the degrees (180 degrees in half a circle)
-
-  // Trig to calc meter point
   var degrees = 180 - level,
-      radius = 0.5;
+      radius = .5;
   var radians = degrees * Math.PI / 180;
   var x = radius * Math.cos(radians);
   var y = radius * Math.sin(radians);
 
-  // Path: may have to change to create a better triangle
   var mainPath = 'M -.0 -0.025 L .0 0.025 L ',
       pathX = String(x),
       space = ' ',
@@ -110,12 +104,12 @@ function updateGaugeChart(wfreq) {
   var data = [
     {
       type: 'scatter',
-      x: [0], y: [0],
-      marker: { size: 28, color: '850000' },
+      x: [0], y:[0],
+      marker: {size: 28, color:'850000'},
       showlegend: false,
       name: 'Washing Frequency',
-      text: `Washing Frequency: ${wfreq}`, // Display wfreq in hover text
-      hoverinfo: `${wfreq}`
+      text: wfreq,
+      hoverinfo: 'text+name'
     },
     {
       values: [50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50],
@@ -124,7 +118,7 @@ function updateGaugeChart(wfreq) {
       textinfo: 'text',
       textposition: 'inside',
       marker: {
-        colors: [
+        colors:[
           'rgba(14, 127, 0, .5)', 'rgba(110, 154, 22, .5)',
           'rgba(170, 202, 42, .5)', 'rgba(202, 209, 95, .5)',
           'rgba(210, 206, 145, .5)', 'rgba(232, 226, 202, .5)',
@@ -133,7 +127,7 @@ function updateGaugeChart(wfreq) {
         ]
       },
       labels: ['8-9', '7-8', '6-7', '5-6', '4-5', '3-4', '2-3', '1-2', '0-1', ''],
-      hoverinfo: `${wfreq}`,
+      hoverinfo: 'label',
       hole: .5,
       type: 'pie',
       showlegend: false
@@ -141,20 +135,22 @@ function updateGaugeChart(wfreq) {
   ];
 
   var layout = {
-    shapes: [{
-      type: 'path',
-      path: path,
-      fillcolor: '850000',
-      line: {
-        color: '850000'
-      }
-    }],
+    shapes:[{
+        type: 'path',
+        path: path,
+        fillcolor: '850000',
+        line: {
+          color: '850000'
+        }
+      }],
     title: 'Belly Button Washing Frequency<br>Scrubs per Week',
     height: 500,
     width: 500,
-    xaxis: { zeroline: false, showticklabels: false, showgrid: false, range: [-1, 1] },
-    yaxis: { zeroline: false, showticklabels: false, showgrid: false, range: [-1, 1] }
+    xaxis: {zeroline:false, showticklabels:false,
+             showgrid: false, range: [-1, 1]},
+    yaxis: {zeroline:false, showticklabels:false,
+             showgrid: false, range: [-1, 1]}
   };
 
-  Plotly.newPlot('gauge', data, layout);
+  Plotly.newPlot('gauge', data, layout, {responsive: true});
 }
